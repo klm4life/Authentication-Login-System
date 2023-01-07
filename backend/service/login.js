@@ -19,7 +19,7 @@ async function login(user) {
     }
 
     const dynamoUser = await getUser(username.toLowerCase().trim());
-    if (!dynamoUser || !dynamoUser.user) {
+    if (!dynamoUser || !dynamoUser.username) {
         return util.buildResponse(403, { message: 'User does not exist.' });
     } 
 
