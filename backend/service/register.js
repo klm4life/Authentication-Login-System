@@ -66,7 +66,7 @@ async function saveUser(user) {
         return true;
     }, error => {
         console.error('There is an error saving user: ', error);
-    })
+    });
 }
 
 module.exports.register = register;
