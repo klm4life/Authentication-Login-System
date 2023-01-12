@@ -16,7 +16,7 @@ const Register = () => {
 			setMessage('All fields are required');
 			return;
 	    }
-	    
+	    setMessage(null);
 		const requestConfig = {
 			headers: {
 				'x-api-key': 'HcBRcNghJa3LwKQHT9GK91O9Fe3McmEy6mdNt4IU' // Should make as environment variable
@@ -45,10 +45,10 @@ const Register = () => {
 		<div>
 			<form onSubmit={submitHandler}>
 				<h5>Register</h5>
-				name: <input type="text" value={name} onChange={event => setName(event.target.value)} /> <br/>
-				email: <input type="text" value={email} onChange={event => setEmail(event.target.value)} /> <br/>
-				username: <input type="text" value={username} onChange={event => setUsername(event.target.value)} /> <br/>
-				password: <input type="password" value={password} onChange={event => setPassword(event.target.value)} /> <br/>
+				Name: <input type="text" value={name} onChange={event => setName(event.target.value)} /> <br/>
+				Email: <input type="text" value={email} onChange={event => setEmail(event.target.value)} /> <br/>
+				Username: <input type="text" value={username} onChange={event => setUsername(event.target.value)} /> <br/>
+				Password: <input type="password" value={password} onChange={event => setPassword(event.target.value)} /> <br/>
 				<input type="submit" value="Register" />
 			</form>
 			{message && <p className="message">{message}</p>}
